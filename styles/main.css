@@ -25,6 +25,10 @@ a {
 /* header */
 
 .header {
+    border-bottom: 1px solid rgb(222, 222, 222);
+}
+
+.header-wrapper {
     display: flex;
     align-items: center;
     gap: 196px;
@@ -42,7 +46,7 @@ a {
 .nav {
     flex-grow: 1;
     display: flex;
-    gap: 46px;
+    gap: 47px;
 }
 .nav-link {
     color: var(--dark);
@@ -123,10 +127,15 @@ a {
 .breadcrumbs-item:not(:last-child)::after {
 content: '/';
 position: absolute;
-right: -12px;
+right: -11px;
+}
+.breadcrumbs-item:last-child {
+right: 1px;
 }
 .breadcrumbs-link {
-    color: rgba(var(--light-rgb), 0.5);    
+    color: rgba(var(--light-rgb), 0.5);
+    position: relative;
+    left: 1px;    
 }
 .breadcrumbs-link:hover {
     color: var(--accent-light);
@@ -136,7 +145,10 @@ right: -12px;
     font-family: var(--nunito-sans);
     font-size: 79px;
     font-weight: 700;
-    text-transform: capitalize
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 18px;
+    ;
 }
 .hero-description {
     max-width: 320px;
@@ -144,4 +156,63 @@ right: -12px;
     color: rgba(var(--light-rgb), 0.8);
     font-size: 15px;
     line-height: 160%;
+}
+
+
+/* Banner */
+
+.banner {
+    margin-top: 140px;
+}
+.banner-wrapper {
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    padding: 100px;
+}
+
+.banner-title span {
+    display: block;
+    width: 95px;
+    height: 28px;
+    background-color: var(--accent-dark);
+    border-radius: 14px;
+    color: var(--light);
+    font-family: var(--open-sans);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    align-content: center; 
+    margin-bottom: 8px;
+}
+.banner-title {
+    font-family: var(--nunito-sans);
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--light);
+    text-align: left;
+    align-content: center;
+    margin: auto;
+}
+.banner-description{
+    font-size: 15px;
+    color: rgba(var(--light-rgb), 0.8);
+    max-width: 320px;
+    max-height: 48px;
+    line-height: 24px;
+   
+}
+.banner-btn {
+    width: 170px;
+    height: 58px;
+    background-color: var(--accent-light);
+    border: 0px;
+    border-radius: 5px;
+    color: var(--dark);
+    font-family: var(--nunito-sans);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    
 }
