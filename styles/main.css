@@ -7,6 +7,7 @@
    --dark: #443737;
    --light: #FFFFFF;
    --light-rgb: 255, 255, 255;
+   --tr: .2;
 
 
 }
@@ -203,18 +204,20 @@ right: 1px;
    
 }
 .banner-btn {
-    width: 170px;
-    height: 58px;
-    background-color: var(--accent-light);
-    border: 0px;
-    border-radius: 5px;
-    color: var(--dark);
-    font-family: var(--nunito-sans);
     font-size: 14px;
+    font-family: var(--nunito-sans);
     font-weight: 700;
-    text-align: center;
+    padding: 22px 25px;
     text-transform: uppercase;
-    
+    text-decoration: none;
+    color:#1E2F40;
+    background-color: var(--accent-light);
+    border: none;
+    border-radius: 5px; 
+    transition: var(--tr);
+}
+.banner-btn:hover {
+    background-color: var(--accent-dark);
 }
 
 /* Menu */
@@ -301,6 +304,10 @@ select {
     display: block;
     text-transform: uppercase;
     text-align: center;
+    transition: var(--tr);
+}
+.menu-btn:hover {
+    background-color: var(--accent-dark);
 }
 .menu-btn img {
     width: 18px;
@@ -331,35 +338,47 @@ select {
     font-family: var(--nunito-sans);
     font-size: 20px;
     font-weight: 800;
+    line-height: 190%;
     text-transform: uppercase;
     color: var(--light);
     margin: 0;
     padding-bottom: 12px;
 }
 .footer-nav {
-    display: block;
-    padding: 9px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.footer-link {
     font-family: var(--open-sans);
     font-size: 15px;
-    color: var(--light);
+    color: rgba(var(--light-rgb), .9);
+    line-height: 160%;
+    transition: var(--tr);
+}
+.footer-link:hover {
+    color: var(--accent-light);
 }
 .footer-list{
-    display: block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+.footer-list-item {
     font-family: var(--open-sans);
     font-size: 15px;
     font-weight: 700;
     line-height: 160%;
-    color: var(--light);
-    list-style-type: none;
-    padding: 0px;
+    color: var(--light); 
 }
-.footer-list span {
+.footer-list-item span {
     display: block;
     font-weight: 400;
-    padding-bottom: 2px;
+    color: rgba(var(--light-rgb), .9);
 }
-.footer-list li {
-    padding-bottom: 12px ;
+.footer-list-item:not(:last-child) {
+    margin-bottom: 14px;
 }
 .footer-tel {
     display: block;
@@ -369,6 +388,9 @@ select {
     line-height: 190%;
     text-transform: uppercase;
     color: var(--accent-light);
-    padding: 2px;
+    margin-top: 12px;
+    transition: var(--tr);
 }
-
+.footer-tel:hover {
+    color: var(--light);
+}
