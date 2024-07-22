@@ -21,6 +21,9 @@ a {
     width: 100%;
     max-width: 1182px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
 }
 
 /* header */
@@ -32,7 +35,7 @@ a {
 .header-wrapper {
     display: flex;
     align-items: center;
-    gap: 196px;
+    gap: 57px;
     padding-top: 26px;
     padding-bottom: 26px;
 }
@@ -48,6 +51,7 @@ a {
     flex-grow: 1;
     display: flex;
     gap: 47px;
+    margin-left: min(10vw, 140px);
 }
 .nav-link {
     color: var(--dark);
@@ -526,4 +530,38 @@ select {
 
 .contact-tel:hover {
     color: var(--accent-light);
+}
+
+/* Media */
+@media (max-width: 1080px) {
+   
+    .header-wrapper {
+        gap: 40px;
+    }
+    .nav {
+        margin-left: 0;
+        gap: min(3vw, 30px)
+    } 
+}
+@media (max-width: 768px) {
+    
+    .logo {
+        width: 150px;
+        height: 47.81px;
+    }
+    .header-wrapper {
+        gap: 45px;  
+    }
+    .nav {
+        gap: 22px
+    } 
+    .banner {
+        margin-top: 72px;
+    }
+    .banner-wrapper {
+        padding: 100px 40px;
+    }
+    .menu-header {
+        margin-top: 80px;
+    }
 }
